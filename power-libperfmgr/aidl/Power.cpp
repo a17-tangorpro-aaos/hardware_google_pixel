@@ -369,6 +369,33 @@ ndk::ScopedAStatus Power::closeSessionChannel(int32_t, int32_t) {
     return ndk::ScopedAStatus::ok();
 }
 
+ndk::ScopedAStatus Power::getSupportInfo(::aidl::android::hardware::power::SupportInfo* _aidl_return) {
+    (void)_aidl_return;
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Power::getCpuHeadroom(const ::aidl::android::hardware::power::CpuHeadroomParams& in_params, ::aidl::android::hardware::power::CpuHeadroomResult* _aidl_return) {
+    (void)in_params;
+    (void)_aidl_return;
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Power::getGpuHeadroom(const ::aidl::android::hardware::power::GpuHeadroomParams& in_params, ::aidl::android::hardware::power::GpuHeadroomResult* _aidl_return) {
+    (void)in_params;
+    (void)_aidl_return;
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Power::sendCompositionData(const std::vector<::aidl::android::hardware::power::CompositionData>& in_data) {
+    (void)in_data;
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Power::sendCompositionUpdate(const ::aidl::android::hardware::power::CompositionUpdate& in_update) {
+    (void)in_update;
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
 }  // namespace pixel
 }  // namespace impl
 }  // namespace power

@@ -25,7 +25,7 @@ option java_package = "android.hardware.google.pixel";
 option java_outer_classname = "PixelAtoms";
 
 import "frameworks/proto_logging/stats/atom_field_options.proto";
-import "frameworks/proto_logging/stats/enums/app/app_enums.proto";
+import "frameworks/proto_logging/stats/enums/app_shared/app_enums.proto";
 
 /*
  * Please note that the following features are not currently supported by
@@ -61,14 +61,14 @@ message Atom {
       VendorSlowIo vendor_slow_io = 105020; // moved from atoms.proto
       VendorSpeechDspStat vendor_speech_dsp_stat = 105021; // moved from atoms.proto
       VendorPhysicalDropDetected vendor_physical_drop_detected =
-                105022 [(android.os.statsd.module) = "pixelstats"];     // moved from atoms.proto
+                105022 [(android.os.statsd.module_name) = "pixelstats"];     // moved from atoms.proto
       VendorUsbPortOverheat vendor_usb_port_overheat = 105023; // moved from atoms.proto
       CmaStatus cma_status = 105024;
       CmaStatusExt cma_status_ext = 105025;
       VendorBatteryHealthSnapshot vendor_battery_health_snapshot =
-                105026 [(android.os.statsd.module) = "pixelhealth"]; // moved from atoms.proto
+                105026 [(android.os.statsd.module_name) = "pixelhealth"]; // moved from atoms.proto
       VendorBatteryCausedShutdown vendor_battery_caused_shutdown =
-                105027 [(android.os.statsd.module) = "pixelhealth"]; // moved from atoms.proto
+                105027 [(android.os.statsd.module_name) = "pixelhealth"]; // moved from atoms.proto
       F2fsGcSegmentInfo f2fs_gc_segment_info = 105028;
       PowerMitigationStats mitigation_stats = 105029; // moved from atoms.proto
 
@@ -77,15 +77,15 @@ message Atom {
       VendorSpeakerStatsReported vendor_speaker_stats_reported = 105030;
 
       ChreHalNanoappLoadFailed chre_hal_nanoapp_load_failed =
-                105031 [(android.os.statsd.module) = "chre"];
-      ChrePalOpenFailed chre_pal_open_failed = 105032 [(android.os.statsd.module) = "chre"];
+                105031 [(android.os.statsd.module_name) = "chre"];
+      ChrePalOpenFailed chre_pal_open_failed = 105032 [(android.os.statsd.module_name) = "chre"];
       ChreApiErrorCodeDistributionTaken chre_api_error_code_distribution_taken =
-                105033 [(android.os.statsd.module) = "chre"];
+                105033 [(android.os.statsd.module_name) = "chre"];
       ChreDynamicMemorySnapshotReported chre_dynamic_memory_snapshot_reported =
-                105034 [(android.os.statsd.module) = "chre"];
+                105034 [(android.os.statsd.module_name) = "chre"];
       ChreEventQueueSnapshotReported chre_event_queue_snapshot_reported =
-                105035 [(android.os.statsd.module) = "chre"];
-      ChreApWakeUpOccurred chre_ap_wake_up_occurred = 105036 [(android.os.statsd.module) = "chre"];
+                105035 [(android.os.statsd.module_name) = "chre"];
+      ChreApWakeUpOccurred chre_ap_wake_up_occurred = 105036 [(android.os.statsd.module_name) = "chre"];
 
       BatteryHealthStatus battery_health_status = 105037;
       BatteryHealthUsage battery_health_usage = 105038;
@@ -125,10 +125,10 @@ message Atom {
       MmProcessUsageByOomGroupSnapshot mm_process_usage_by_oom_group_snapshot = 105070;
       MmGcmaSnapshot mm_gcma_snapshot = 105071;
       MmGcmaStats mm_gcma_stats = 105072;
-      VendorAudioUsbDeviceCapabilityStats vendor_audio_usb_device_capability_stats = 105073 [(android.os.statsd.module) = "pixelaudio"];
+      VendorAudioUsbDeviceCapabilityStats vendor_audio_usb_device_capability_stats = 105073 [(android.os.statsd.module_name) = "pixelaudio"];
       BatteryTimeToFullStatsReported battery_time_to_full_stats_reported = 105074;
-      VendorAudioDirectUsbAccessUsageStats vendor_audio_direct_usb_access_usage_stats = 105075 [(android.os.statsd.module) = "pixelaudio"];
-      VendorAudioUsbConfigStats vendor_audio_usb_config_stats = 105076 [(android.os.statsd.module) = "pixelaudio"];
+      VendorAudioDirectUsbAccessUsageStats vendor_audio_direct_usb_access_usage_stats = 105075 [(android.os.statsd.module_name) = "pixelaudio"];
+      VendorAudioUsbConfigStats vendor_audio_usb_config_stats = 105076 [(android.os.statsd.module_name) = "pixelaudio"];
     }
     // AOSP atom ID range ends at 109999
     reserved 109997; // reserved for VtsVendorAtomJavaTest test atom

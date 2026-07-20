@@ -25,6 +25,7 @@
 
 #include <inttypes.h>
 #include <chrono>
+#include <algorithm>
 #include <numeric>
 #include <string>
 

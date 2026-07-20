@@ -52,6 +52,11 @@ class Power : public ::aidl::android::hardware::power::BnPower {
     ndk::ScopedAStatus getSessionChannel(int32_t tgid, int32_t uid,
                                          ChannelConfig *_aidl_return) override;
     ndk::ScopedAStatus closeSessionChannel(int32_t tgid, int32_t uid) override;
+    ndk::ScopedAStatus getSupportInfo(::aidl::android::hardware::power::SupportInfo* _aidl_return) override;
+    ndk::ScopedAStatus getCpuHeadroom(const ::aidl::android::hardware::power::CpuHeadroomParams& in_params, ::aidl::android::hardware::power::CpuHeadroomResult* _aidl_return) override;
+    ndk::ScopedAStatus getGpuHeadroom(const ::aidl::android::hardware::power::GpuHeadroomParams& in_params, ::aidl::android::hardware::power::GpuHeadroomResult* _aidl_return) override;
+    ndk::ScopedAStatus sendCompositionData(const std::vector<::aidl::android::hardware::power::CompositionData>& in_data) override;
+    ndk::ScopedAStatus sendCompositionUpdate(const ::aidl::android::hardware::power::CompositionUpdate& in_update) override;
     binder_status_t dump(int fd, const char **args, uint32_t numArgs) override;
 
   private:

@@ -106,7 +106,7 @@ void IioEnergyMeterDataProvider::parseEnabledRails() {
 }
 
 IioEnergyMeterDataProvider::IioEnergyMeterDataProvider(
-        const std::vector<const std::string> &deviceNames, const bool useSelector)
+        const std::vector<std::string> &deviceNames, const bool useSelector)
     : kDeviceNames(std::move(deviceNames)) {
     findIioEnergyMeterNodes();
     if (useSelector) {
